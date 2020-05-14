@@ -1,6 +1,12 @@
 body {
     background-color : red;
 }
-h1 {
+.btn {
     cursor : pointer;
+}
+h1 {
+   transition: color .5s ease-in-out;
+}
+.clicked {
+    color : yellow;
 }
