@@ -1,0 +1,312 @@
+/* COMMON */
+.body__container {
+    font-family : 'Black Han Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+a {
+    text-decoration: none;
+}
+/* FLOAT CLEARFIX */
+.clearfix::after {
+    content: "";
+    clear : both;
+    display : block;
+}
+.float--left {
+    float : left;
+}
+.float--right {
+    float : right;
+}
+/* SUMMARY */
+.summary {
+
+}
+.summary__title {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom : 18px;
+}
+.summary__description {
+    font-size: 26px;
+    font-weight: 300;
+    color : #767676;
+    line-height:  1.5;
+}
+/* SECTION & INNER*/
+.section {
+    position: relative;
+    /* relative 를 중간에 둬서 오류가 생기는 것을 방지 */
+}
+.section .inner {
+    max-width: 980px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+}
+/* SUbMIT */
+input[type="submit"] {
+    display: none;
+}
+/* BTN */
+.btn {
+    height : 34px;
+    background : #eee linear-gradient(to bottom, #fcfcfc,#eee);
+    border : 1px solid #d5d5d5;
+    border-radius : 4px;
+    padding : 0 12px;
+    display : inline-flex;
+    align-items : center;
+    cursor : pointer;
+    box-sizing : border-box;
+    font-size : 14px;
+    font-weight : 500;
+    line-height: 1.5;
+    position : relative;
+    color: #333;
+  }
+  .btn:hover::before {
+    content : "";
+    position : absolute;
+    top : 0;
+    left : 0;
+    height : 100%;
+    width : 100%;
+    background : rgba(0,0,0,0.07);
+  }
+  .btn.btn--primary {
+    border : 1px solid #65b836;
+    color : #fff;
+    background : #55a532 linear-gradient(#91dd70,#55ae2e);
+  }
+/* INPUT */
+.input--text {
+    height : 34px;
+    padding : 0px 10px;
+    border : 1px solid #ddd;
+    border-radius : 5px;
+    box-sizing : border-box;
+    outline : none;
+    box-shadow : inset 0px 1px 2px rgba(0,0,0,0.075);
+    font-size : 16px;
+  }
+.input--text:focus {
+    border-color : #51a7e8;
+    box-shadow : inset 0px 1px 2px rgba(0,0,0,0.075),
+                 0 0 5px rgba(81,167,232,0.5);
+  }
+  /*Vender Prefix (브라우저 업체별 접두사)  */
+.input--text::-webkit-input-placeholder { color : #cacaca;}
+.input--text::-ms-input-placeholder { color : #cacaca;}
+.input--text::-moz-input-placeholder { color : #cacaca;}
+
+
+/* HEADER */
+header {
+    border-bottom : 1px solid rgba(0,0,0,.075);
+    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    background : #0059ab;
+}
+header .inner {
+    height : 78px;
+    /* margin 으로 중앙 정렬 - width 정의 되어있어야 사용 가능 */
+}
+header .menu-group {
+    display : flex;
+    align-items: center;
+    height: 100%;
+}
+header .logo {
+    margin-right : 10px;
+}
+header .logo a {
+    background: url("../twitter.svg");
+    height: 34px;
+    width: 34px;
+    display: block;
+    text-indent: -9999px;
+}
+header .main-menu {
+    display : flex;
+}
+header .main-menu li a {
+    display : block;
+    padding : 10px;
+    color : #fff;
+}
+header .main-menu li a:hover {
+    color : #c1c1e3;
+}
+header .sign-group {
+    align-items: center;
+    display : flex;
+    height: 100%;
+}
+header .btn-group {
+    /* flex 하는 이유 : btn 만들 때 inline-flex로 해서
+    a 태크 줄바꿈시 하나의 띄어쓰기로 인식하기 때문에
+    버튼 사이에 의도치 않은 패딩이 들어갔다. */
+    display : flex;
+    order : 1;
+}
+header .btn-group .sign-in {
+    margin-right : 4px;
+}
+#search-form {
+    margin-right: 12px;
+}
+#search {
+    width : 160px;
+    font-size: 14px;
+}
+/* #search + [type="submit"] {
+    display :none 
+ } =? 이런식으로 submit 버튼 없앨 수도 있다. */
+header .sub-menu {
+    display: flex;
+    order : -1;
+    margin-right: 10px;
+}
+header .sub-menu li a {
+    padding: 8px;
+    color : #fff;
+    font-size: 12px;
+    /* display 블록 해도 안해도 차이가 없는데? */
+    display: block; 
+}
+header .sub-menu li a:hover {
+    color : #c1c1e3;
+}
+/* .body_contents {
+    background : no-repeat url(../code.jpg);
+    
+    
+}
+.body_contents .inner {
+    max-width: 980px;
+    height: 800px;
+    margin : 0 auto;
+    
+    justify-content: left;
+}
+.body_contents .comments {
+    margin-top : 100px;
+    width : 550px;
+    float:left;
+    box-sizing: border-box;
+    color : #fff;
+}
+.body_contents .comments h1 {
+    font-size : 70px;
+}.body_contents .comments h2 {
+    font-size : 30px;
+}
+.body_contents .login-group {
+    width:400px;
+    height: 500px;
+    margin-top :120px;
+    float : right;
+}
+.body_contents .login-group form {
+    margin-top : 100px;
+    padding-left : 50px;
+}
+.body_contents .login-group form li {
+    margin-bottom: 10px;
+} */
+
+/* VISUAL */
+.section--visual {
+    background-image : url(../code.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size : cover;
+    /* 브라우저가 확장 축소되더라도 배경이 전체 브라우저를 "덮을수" 있도록 설정*/
+}
+.section--visual::before {
+    content: "";
+    /* position : relative - 즉 부모 요소의 기준을 찾게 되는데 
+    이미 common - section 부분에 relative 로 해뒀기 떄문에
+    브라우저 전체를 부모로 보지 않을 것이다. */
+    position: absolute;
+    top : 0;
+    left : 0;
+    /* width : 100%;
+    height : 100%; 
+    아래 바텀 right 0과 동일한 효과*/
+    bottom : 0;
+    right : 0;
+    background : rgba(0,0,0,.3);
+}
+.section--visual .inner {
+    display: flex;
+    padding : 160px 0; 
+    /* 위 아래 내부 여백이 필요하다. */
+}
+.section--visual .summary {
+    /* flex-grow 는 flex컨테이너 안의 flex 항목들을 분배하는데
+    grow 값에 따라서 항목의 flex-basis 값을 제외한 나머지 부분까지
+    분배해준다. grow 값이 1:1 의 경우 반반씩 나누는 식이다.
+    아래의 경우 inner 컨테이너에서 summary와 sign-form 항목 두개가 있는데
+    summary 항목에만 flow = 1을 넣으면 기본값은 0이므로 sign-form 항목은
+    0이 되고 flex-basis 값도 기본값이 auto (즉, 항목의 너비나
+    그 항목안의 내용물의 너비가 곧 flex-basis 가 된다.)
+    따라서 아래의 경우, summary 는 flex-basis 가 auto인 sign-form의 너비를
+    제외한 모든 너비를 차지하게 된다.*/
+    flex-grow: 1;
+    flex-basis: 0;
+    /* flex : 1; = flex: 1 0 0 (grow,shrink,basis) */
+    margin-right: 90px;
+
+}
+.section--visual .summary__title {
+    color : #fff;
+    font-size: 54px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25),
+                 0 1px 1px rgba(0,0,0,.75);
+    /* 글자기준 x축이동 y축이동 블러 불투명도*/
+}
+.section--visual .summary__description {
+    color : #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25),
+                 0 1px 1px rgba(0,0,0,.75);
+    /* 글자기준 x축이동 y축이동 블러 불투명도*/
+}
+/* input, a 태그는 (text 같은 )인라인 요소이다. 수평으로 쌓임 
+따라서 수직으로 쌓이도록 하기 위해 ul 안에 li (블록요소) 로 감싸준다.*/
+#sign-form {
+    width: 340px;
+}
+#sign-form li {
+    margin-bottom : 17px;
+}
+#sign-form li:last-child {
+    margin-bottom: 0;
+}
+
+#sign-form .input--text {
+    width: 100%;
+    height: 40px;
+}
+#sign-form .caption {
+    font-size: 12px;
+    margin-top: 5px;
+    color : rgba(255,255,255,.6);
+    line-height: 1.5;
+    /* text align 은 텍스트 정렬에 쓰이는 css 속성 이다. */
+    text-align: center;
+}
+#sign-form [type="submit"] {
+    width: 100%;
+    height: 62px;
+    padding : 0 25px;
+    font-size : 20px;
+    /* text-align: center;
+    text 가 아니라 btn 그룹 안에 포함되므로
+    btn 은 inline-flex 로 정의 되어 있어서
+    flex 요소는 justify-content:(수평정렬시)로 center로 설정 가능하다.; */
+    justify-content: center;
+}

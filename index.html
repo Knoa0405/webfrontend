@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>코딩가이드</title>
+    <meta name="author" content="noa">
+    <meta name="description" content="이 사이트는 코딩 공부를 시작하는 사람들을 위해 만든 사이트입니다.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Open graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="코딩가이드">
+    <meta property="og:title" content="코딩 공부를 이제 막 시작하는 스터디 모임 사이트">
+    <meta property="og:description" content="코딩을 공부하고 같이 모르는 것을 나누며 함께 성장하는 모임을 주선하고 고민을 함께">
+    <meta property="og:image" content="https://miro.medium.com/max/398/1*1OKmA2EdGln8O6RCVORgGg.png">
+    <meta property="og:url" content="http://codingguide.com">
+    <!-- Twitter card -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="코딩 가이드">
+    <meta property="twitter:title" content="코딩 공부를 이제 막 시작하는 스터디 모임 사이트">
+    <meta property="twitter:description" content="코딩을 공부하고 같이 모르는 것을 나누며 함께 성장하는 모임을 주선하고 고민을 함께">
+    <meta property="twitter:image" content="https://miro.medium.com/max/398/1*1OKmA2EdGln8O6RCVORgGg.png">
+    <meta property="twitter:url" content="http://codingguide.com">
+    
+    <!-- favicon <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+    <link rel="icon" href="https://github.githubassets.com/pinned-octocat.svg">
+    <link rel="apple-touch-icon" href="https://github.githubassets.com/pinned-octocat.svg">
+    <!-- 구글 폰트 적용 -->
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean" rel="stylesheet">
+
+    <!-- 웹 브라우저 초기 렌더링 reset 적용 reset.css cdn "검색"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+<body>
+<div class="body__container">
+    <!-- HEADER -->
+    <header class="section">
+        <div class="inner clearfix">
+            
+            <div class="menu-group float--left">
+                <div class="logo">
+                    <a href="#">CodeGuide</a>
+                </div>
+                <ul class="main-menu">
+                    <li><a href="#">코드나눔</a></li>
+                    <li><a href="#">코드리뷰</a></li>
+                    <li><a href="#">코딩모임</a></li>
+                    <li><a href="#">멘토&멘티</a></li>
+                </ul>
+            </div>
+
+            <div class="sign-group float--right">
+                <div class="btn-group">
+                    <a href="#" class="btn sign-in">Sign in</a>
+                    <a href="#" class="btn btn--primary sign-up">Sign up</a>
+                </div>
+                <form id="search-form" method="POST" action="">
+                    <input type="text" id="search" class="input--text" placeholder="Search code">
+                    <input type="submit" value="Submit">
+                </form>
+                <ul class="sub-menu">
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">Meeting</a></li>
+                    <li><a href="#">Manto</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+    <!-- <div class="body_contents">
+        <div class="inner">
+            <div class="comments">
+                <h1>
+                    How people build software
+                </h1>
+                <h2>
+                    Millions of developers use <br>GitHub to build 
+                    personal projects, support their businesses, and work together 
+                    on open source technologies.
+                </h2>
+            </div>
+            <div class="login-group">
+                <form id="login-form" method="POST">
+                    <li>
+                        <input type="email" id="id" class="input--text" placeholder="아이디">
+                    </li>
+                    <li>
+                        <input type="password" id="pw" class="input--text" placeholder="비밀번호">
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn--primary sign-up for codeGuide">Sign up for Code Guide</a>
+                    </li>
+                </form>
+                    
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- VISUAL -->
+    <section class="section section--visual">
+        <div class="inner">
+            <div class="summary">
+                <div class="summary__title">
+                    How people build software
+                </div>
+                <div class="summary__description">
+                    Millions of developers use GitHub to build personal projects, support their businesses, and work together on open source technologies.
+                </div>
+            </div>
+            <!-- form 태그 안에 submit 버튼이 있으면 버튼 클릭시 form 태그 안에 
+                    작성된 내용들이 action="(특정 페이지 주소로)" 전달된다. -->
+            <form id="sign-form" method="POST" action="">
+               <ul>
+                   <li><input type="text" class="input--text" placeholder="별명"></li>
+                   <li><input type="email" class="input--text" placeholder="아이디(이메일)"></li>
+                   <li>
+                       <input type="password" class="input--text" placeholder="비밀번호">
+                       <p class="caption">비밀번호는 가능하면 어렵게 만드는 것을 권장합니다.</p>
+                   </li>
+                   <li>
+                       <!-- input 태그 submit 도 가능하지만 button 태그 type submit 도 가능하다. -->
+                       <button type="submit" class="btn btn--primary">Sign up for CodeGuide</button>
+                       <p class="caption">
+                           버튼 클릭시 저희와 함께 HACK coding 이 가능합니다.
+                       </p>
+                   </li>
+               </ul>
+            </form>
+        </div>
+    </section>
+</div>
+</body>
+</html>
